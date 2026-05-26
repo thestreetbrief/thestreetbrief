@@ -15,7 +15,7 @@ window.TSB_CONFIG = {
   BEEHIIV_FORM_URL: "",
 
   // Success message shown after a successful signup.
-  NEWSLETTER_SUCCESS: "✓ You're in. First brief lands tomorrow at 06:00 ET.",
+  NEWSLETTER_SUCCESS: "✓ You're in. First issue lands Sunday morning.",
 
   // ---------- Shopify Lite (merch) ----------
   // After you sign up for Shopify Lite ($5/mo):
