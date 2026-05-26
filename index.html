@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TheStreetBrief — Markets, macro & banking, briefed daily.</title>
+  <meta name="description" content="A daily intelligence brief on markets, macro / equity research, and investment banking — by @afinancebro." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="home">
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark"><span>AFB</span></span>
+        <span class="brand__name">The<em>Street</em>Brief</span>
+      </a>
+      <nav class="nav">
+        <a class="nav__link" href="index.html" aria-current="page">Home</a>
+        <a class="nav__link" href="shop.html">Shop</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="advertise.html">Advertise</a>
+        <a class="nav__link" href="management.html">Management</a>
+      </nav>
+      <a class="btn" href="#subscribe">Subscribe <span class="arrow">→</span></a>
+    </div>
+  </header>
+
+  <!-- ============== TICKER (white) ============== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker__rail">
+      <span class="ticker__item"><span class="ticker__sym">SPX</span><span>5,847.23</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.42%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">NDX</span><span>18,392.10</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.71%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">DJI</span><span>42,118.04</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 0.13%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">RUT</span><span>2,184.32</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.88%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">VIX</span><span>14.12</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 2.40%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">10Y</span><span>4.28%</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 3bps</span></span>
+      <span class="ticker__item"><span class="ticker__sym">GS</span><span>518.94</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 1.91%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">JPM</span><span>241.07</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 1.88%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">MS</span><span>132.18</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.96%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">BTC</span><span>71,802</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 1.42%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">ETH</span><span>3,612</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 2.10%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">GOLD</span><span>2,418</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.22%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">WTI</span><span>71.42</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 1.08%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">EUR</span><span>1.0842</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.08%</span></span>
+      <!-- duplicate for seamless loop -->
+      <span class="ticker__item"><span class="ticker__sym">SPX</span><span>5,847.23</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.42%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">NDX</span><span>18,392.10</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.71%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">DJI</span><span>42,118.04</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 0.13%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">RUT</span><span>2,184.32</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.88%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">VIX</span><span>14.12</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 2.40%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">10Y</span><span>4.28%</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 3bps</span></span>
+      <span class="ticker__item"><span class="ticker__sym">GS</span><span>518.94</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 1.91%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">JPM</span><span>241.07</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 1.88%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">MS</span><span>132.18</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.96%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">BTC</span><span>71,802</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 1.42%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">ETH</span><span>3,612</span><span class="ticker__down"><span class="ticker__arrow">▼</span> 2.10%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">GOLD</span><span>2,418</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.22%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">WTI</span><span>71.42</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 1.08%</span></span>
+      <span class="ticker__item"><span class="ticker__sym">EUR</span><span>1.0842</span><span class="ticker__up"><span class="ticker__arrow">▲</span> 0.08%</span></span>
+    </div>
+  </div>
+
+  <!-- ============== HERO (clean) ============== -->
+  <section class="hero" id="subscribe" style="text-align: center; padding: clamp(72px, 10vw, 140px) 0 clamp(60px, 8vw, 120px);">
+    <div class="container" style="max-width: 980px;">
+      <p class="eyebrow eyebrow--green" style="margin-bottom: 36px;">— A daily Wall Street brief</p>
+      <h1 style="font-size: clamp(3rem, 2.2rem + 5vw, 7rem); line-height: 0.95; letter-spacing: -0.025em;">
+        Markets, macro &amp; <br/>
+        banking — <em style="font-style: italic; color: var(--green);">briefed by 06:00.</em>
+      </h1>
+      <p style="font-size: clamp(1.05rem, 1rem + 0.4vw, 1.25rem); color: var(--ink-soft); max-width: 620px; margin: 36px auto 0; line-height: 1.5;">
+        Get smarter in two minutes. Subscribe for the morning brief on markets, macro &amp; equity
+        research, and the deal sheet — by @afinancebro.
+      </p>
+
+      <form class="nl-form" id="heroForm" novalidate style="margin: 44px auto 0;">
+        <input type="email" required placeholder="Your email address" aria-label="Email address" />
+        <button type="submit">Subscribe →</button>
+      </form>
+
+      <div class="nl-meta" style="justify-content: center; margin-top: 18px;">
+        <span class="nl-meta__avatars" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span>
+        </span>
+        <span>Joined by thousands across GS · JPM · MS · Citadel · KKR</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== LATEST POSTS ============== -->
+  <section style="padding-top: clamp(40px, 5vw, 64px); padding-bottom: clamp(80px, 10vw, 140px); border-top: 1px solid var(--rule);">
+    <div class="container">
+      <div class="simple-head">
+        <h2>Latest Posts</h2>
+        <a href="#">View all <span>→</span></a>
+      </div>
+
+      <div class="posts-grid">
+        <article class="post-card">
+          <div class="post-card__media" data-placeholder="hero image · 16:10">
+            <span class="post-card__category">Markets</span>
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__date">May 22, 2026</span>
+            <h3 class="post-card__title">The Fed blinked. The curve didn't.</h3>
+            <p class="post-card__dek">Plus: bank ER prints diverge, BoJ surprise on the wires, and a quiet block trade nobody saw print at 15:58.</p>
+            <div class="post-card__foot">TheStreetBrief · #247</div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-card__media" data-placeholder="hero image · 16:10">
+            <span class="post-card__category">Investment Banking</span>
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__date">May 21, 2026</span>
+            <h3 class="post-card__title">A megadeal nobody pitched.</h3>
+            <p class="post-card__dek">A boutique walked away with a $32B sell-side. The bulge brackets didn't see it coming — and the league tables are about to shift.</p>
+            <div class="post-card__foot">TheStreetBrief · #246</div>
+          </div>
+        </article>
+
+        <article class="post-card">
+          <div class="post-card__media" data-placeholder="hero image · 16:10">
+            <span class="post-card__category">Macro &amp; ER</span>
+          </div>
+          <div class="post-card__body">
+            <span class="post-card__date">May 20, 2026</span>
+            <h3 class="post-card__title">CPI revised. The desks reprice.</h3>
+            <p class="post-card__dek">An April revision changes the September dot. We walk through what the desks bought into the close — and what's getting unwound by Friday.</p>
+            <div class="post-card__foot">TheStreetBrief · #245</div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== MARKET SNAPSHOT ============== -->
+  <section class="market-snapshot">
+    <div class="container">
+      <div class="market-snapshot__grid">
+        <div>
+          <p class="eyebrow" style="color: var(--gold-soft); margin-bottom: 20px;">— Today on the screens</p>
+          <h2>Market <em>Snapshot.</em></h2>
+          <p class="market-snapshot__dek">
+            A quick look at where things stand. Subscribe to get the full read — what moved overnight, what's priced for the open, and what the desks are watching today.
+          </p>
+
+          <form class="nl-form" novalidate>
+            <input type="email" required placeholder="Your email address" aria-label="Email address" />
+            <button type="submit">Subscribe →</button>
+          </form>
+          <p class="market-snapshot__meta">Free · every weekday at 06:00 ET</p>
+        </div>
+
+        <div class="snapshot-table">
+          <div class="snapshot-row">
+            <div>
+              <div class="snapshot-row__sym">^GSPC</div>
+              <div class="snapshot-row__name">S&amp;P 500</div>
+            </div>
+            <div>
+              <div class="snapshot-row__val">5,847.23</div>
+              <div class="snapshot-row__chg snapshot-row__chg--up">▲ 0.42%</div>
+            </div>
+          </div>
+          <div class="snapshot-row">
+            <div>
+              <div class="snapshot-row__sym">^DJI</div>
+              <div class="snapshot-row__name">Dow Jones</div>
+            </div>
+            <div>
+              <div class="snapshot-row__val">42,118.04</div>
+              <div class="snapshot-row__chg snapshot-row__chg--down">▼ 0.13%</div>
+            </div>
+          </div>
+          <div class="snapshot-row">
+            <div>
+              <div class="snapshot-row__sym">^IXIC</div>
+              <div class="snapshot-row__name">Nasdaq Composite</div>
+            </div>
+            <div>
+              <div class="snapshot-row__val">18,392.10</div>
+              <div class="snapshot-row__chg snapshot-row__chg--up">▲ 0.71%</div>
+            </div>
+          </div>
+          <div class="snapshot-row">
+            <div>
+              <div class="snapshot-row__sym">^RUT</div>
+              <div class="snapshot-row__name">Russell 2000</div>
+            </div>
+            <div>
+              <div class="snapshot-row__val">2,184.32</div>
+              <div class="snapshot-row__chg snapshot-row__chg--up">▲ 0.88%</div>
+            </div>
+          </div>
+          <div class="snapshot-row">
+            <div>
+              <div class="snapshot-row__sym">^FTSE</div>
+              <div class="snapshot-row__name">FTSE 100</div>
+            </div>
+            <div>
+              <div class="snapshot-row__val">8,419.11</div>
+              <div class="snapshot-row__chg snapshot-row__chg--down">▼ 0.40%</div>
+            </div>
+          </div>
+          <div class="snapshot-row">
+            <div>
+              <div class="snapshot-row__sym">BTC-USD</div>
+              <div class="snapshot-row__name">Bitcoin</div>
+            </div>
+            <div>
+              <div class="snapshot-row__val">71,802</div>
+              <div class="snapshot-row__chg snapshot-row__chg--down">▼ 1.42%</div>
+            </div>
+          </div>
+          <div class="snapshot-row">
+            <div>
+              <div class="snapshot-row__sym">GC</div>
+              <div class="snapshot-row__name">Gold</div>
+            </div>
+            <div>
+              <div class="snapshot-row__val">2,418.50</div>
+              <div class="snapshot-row__chg snapshot-row__chg--up">▲ 0.22%</div>
+            </div>
+          </div>
+          <div class="snapshot-row">
+            <div>
+              <div class="snapshot-row__sym">CL</div>
+              <div class="snapshot-row__name">Crude Oil</div>
+            </div>
+            <div>
+              <div class="snapshot-row__val">71.42</div>
+              <div class="snapshot-row__chg snapshot-row__chg--up">▲ 1.08%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== BIG CLOSING CTA ============== -->
+  <section class="brand-cta">
+    <div class="brand-cta__ornaments" aria-hidden="true">
+      <span class="brand-cta__orn brand-cta__orn--l">$</span>
+      <span class="brand-cta__orn brand-cta__orn--r">$</span>
+    </div>
+    <div class="container">
+      <h2>Keep up with <em>the market.</em></h2>
+      <p class="brand-cta__dek">
+        One email, every weekday at 06:00 ET. Markets, macro, and the deal sheet — in two minutes.
+      </p>
+      <form class="nl-form" novalidate>
+        <input type="email" required placeholder="Your email address" aria-label="Email address" />
+        <button type="submit">Subscribe →</button>
+      </form>
+      <p class="brand-cta__meta">Free, forever · No spam · Unsubscribe in one click</p>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand">
+            <span class="brand__mark"><span>AFB</span></span>
+            <span class="brand__name" style="color: var(--paper);">The<em style="color: var(--gold-soft);">Street</em>Brief</span>
+          </div>
+          <p>A daily intelligence brief on markets, macro, and banking — by @afinancebro.</p>
+        </div>
+        <div class="footer-col">
+          <h4>The Brief</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#subscribe">Subscribe</a></li>
+            <li><a href="#">Sample issue</a></li>
+            <li><a href="#">Archive</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="advertise.html">Advertise</a></li>
+            <li><a href="management.html">Management</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Follow</h4>
+          <ul>
+            <li><a href="#">Instagram — @thestreetbrief</a></li>
+            <li><a href="#">X / Twitter — @thestreetbrief</a></li>
+            <li><a href="#">LinkedIn</a></li>
+            <li><a href="#">TikTok</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 TheStreetBrief · All rights reserved</span>
+        <span>Not investment advice · No affiliations implied</span>
+      </div>
+    </div>
+  </footer>
+
+  <div id="tweaks-root"></div>
+
+  
+  <script src="site-config.js"></script>
+
+
+  
+  <script src="forms.js" defer></script>
+
+
+  
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script type="text/babel" src="tweaks-panel.jsx"></script>
+  <script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+</html>
