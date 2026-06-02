@@ -26,4 +26,10 @@ window.TSB_CONFIG = {
   //
   // No values needed here yet — Shopify Lite gives you copy-paste embed code.
 
+  // ---------- Live market prices ----------
+  // Handled server-side by /api/quotes.js (Vercel function) so your API key
+  // stays private and traffic doesn't burn the free tier. Nothing to set here.
+  // The key lives in Vercel → Settings → Environment Variables (TWELVE_DATA_KEY),
+  // with a fallback inside api/quotes.js.
+
 };

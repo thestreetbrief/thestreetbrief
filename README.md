@@ -55,7 +55,20 @@ Every newsletter form on every page now writes to Beehiiv. **Done.**
 
 That's it. Shopify handles cart, checkout, payments, shipping labels, taxes, inventory.
 
-### 3. Vercel (hosting) — 2 min
+### 3. Live market prices — 2 min
+
+The scrolling ticker (every page) and the Market Snapshot table (home) pull from a small built-in Vercel function (`api/quotes.js`) that fetches quotes from **Twelve Data**, caches them on Vercel's CDN (~15 min), and serves the same data to every visitor. This keeps the free tier happy regardless of traffic and keeps your key private.
+
+1. Your key is already wired in as a fallback. To keep it fully private, in Vercel go to **Settings → Environment Variables** and add:
+   ```
+   TWELVE_DATA_KEY = your-key-here
+   ```
+   Then redeploy. (Skipping this still works — the key in `api/quotes.js` is used as a fallback.)
+2. That's it. Eight symbols update roughly every 15 minutes: S&P 500, Dow, Nasdaq, Russell 2000, FTSE 100, Bitcoin, Gold, Crude.
+
+> **Note:** Until deployed on Vercel, the `/api/quotes` endpoint doesn't exist (e.g. if you just open the HTML files locally), so the ticker shows its built-in placeholder numbers. Once live on Vercel, real data flows in. If Twelve Data's free plan doesn't return a given index, that row keeps its placeholder — tell me and I'll switch the symbol.
+
+### 4. Vercel (hosting) — 2 min
 
 #### Easiest path (no Git)
 
@@ -69,7 +82,7 @@ That's it. Shopify handles cart, checkout, payments, shipping labels, taxes, inv
 2. Connect the repo at [vercel.com/new](https://vercel.com/new).
 3. Now every git push auto-deploys.
 
-### 4. Custom domain — 5 min
+### 5. Custom domain — 5 min
 
 1. Buy `thestreetbrief.com` somewhere ([Namecheap](https://namecheap.com), [Porkbun](https://porkbun.com), [Cloudflare](https://cloudflare.com)).
 2. In Vercel: **Project Settings → Domains → Add**, type `thestreetbrief.com`.
