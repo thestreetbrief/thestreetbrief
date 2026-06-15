@@ -512,14 +512,15 @@ section { padding: var(--section-pad) 0; position: relative; }
 
 /* ---------- Logo wall ---------- */
 .logo-wall {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   border-top: 1px solid var(--rule);
   border-bottom: 1px solid var(--rule);
 }
 .logo-wall__item {
-  padding: 32px 16px;
-  border-right: 1px solid var(--rule);
+  flex: 0 0 200px;
+  padding: 36px 20px;
   display: grid; place-items: center;
   font-family: "DM Serif Display", serif;
   font-size: 1.05rem;
@@ -527,8 +528,32 @@ section { padding: var(--section-pad) 0; position: relative; }
   color: var(--ink-soft);
   text-align: center;
 }
-.logo-wall__item:last-child { border-right: 0; }
 .logo-wall__item small {
+  display: block;
+  font-family: "Geist Mono", monospace;
+  font-size: 0.62rem;
+  letter-spacing: 0.16em;
+  color: var(--ink-mute);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.logo-wall__logo {
+  width: 60px; height: 60px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--rule);
+  display: block;
+}
+.logo-wall__more {
+  text-align: center;
+  margin-top: 22px;
+  font-family: "DM Serif Display", serif;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+}
+.logo-wall__more small {
   display: block;
   font-family: "Geist Mono", monospace;
   font-size: 0.62rem;
@@ -1255,6 +1280,46 @@ section { padding: var(--section-pad) 0; position: relative; }
 }
 .product-card__buy:hover { background: var(--green); border-color: var(--green); }
 
+/* Split card: Shopify photo + our title/tagline + Shopify price/cart */
+.product-card--split { display: flex; flex-direction: column; position: relative; background: #FFFFFF; }
+.product-card--split > .product-card__badge { position: absolute; top: 16px; left: 16px; z-index: 3; }
+.product-card__media-shopify { line-height: 0; border-bottom: 1px solid var(--rule); background: #FFFFFF; }
+.product-card__info { display: flex; flex-direction: column; flex: 1; padding: 0 18px 18px; }
+.product-card--split .product-card__title {
+  margin-top: 16px;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  min-height: 2.4em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.product-card__tagline {
+  font-family: "Geist", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.4;
+  color: var(--ink-mute);
+  margin-top: 6px;
+  margin-bottom: 16px;
+  min-height: 2.4em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-wrap: pretty;
+}
+.product-card__buy-shopify { margin-top: auto; }
+
+/* Shopify-rendered product cards (real photo + title + price + button) */
+.product-card--shopify { position: relative; padding-bottom: 20px; }
+.product-card--shopify > .product-card__badge { position: absolute; top: 16px; left: 16px; z-index: 3; }
+.product-card--shopify .shopify-buy__product { padding: 0 !important; }
+.product-card--shopify .shopify-buy__product__title,
+.product-card--shopify .shopify-buy__product__price { padding-left: 22px !important; padding-right: 22px !important; }
+.product-card--shopify .shopify-buy__btn-wrapper { padding: 14px 22px 0 !important; }
+.product-card--shopify .shopify-buy__product-img-wrapper { margin-bottom: 18px !important; }
+
 /* Where Shopify Lite Buy Buttons get embedded — keep them looking native */
 .shopify-buy-frame { width: 100% !important; }
 .shopify-buy__btn {
@@ -1273,9 +1338,9 @@ section { padding: var(--section-pad) 0; position: relative; }
 
 /* ---------- Shop hero meta strip ---------- */
 .shop-meta {
-  display: flex; gap: 32px; flex-wrap: wrap;
-  margin-top: 40px;
-  padding-top: 28px;
+  display: flex; gap: 28px; flex-wrap: wrap;
+  margin-top: 22px;
+  padding-top: 18px;
   border-top: 1px solid var(--rule);
   font-family: "Geist Mono", monospace;
   font-size: 0.78rem;
@@ -1283,9 +1348,31 @@ section { padding: var(--section-pad) 0; position: relative; }
   letter-spacing: 0.04em;
 }
 
+/* Shop page: tighter hero so products sit higher */
+body[data-page="shop"] .page-hero { padding-top: clamp(28px, 4vw, 48px); padding-bottom: clamp(24px, 3vw, 36px); }
+body[data-page="shop"] .page-hero__lede { margin-top: 18px; }
+body[data-page="shop"] .shop-meta { justify-content: center; }
+body[data-page="shop"] .brand-cta { padding: clamp(48px, 6vw, 80px) 0 clamp(44px, 5vw, 72px); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 980px) {
-  .nav { display: none; }
+  /* Mobile header: logo + CTA on row 1, nav links on a centered row 2 */
+  .site-header__inner {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 0;
+    gap: 12px 16px;
+  }
+  .nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    padding-top: 12px;
+    border-top: 1px solid var(--rule);
+  }
+  .nav__link { padding: 4px 0; }
   .stat-row { grid-template-columns: repeat(2, 1fr); }
   .cards-3 { grid-template-columns: 1fr; }
   .coverage { border-right: 0; border-bottom: 1px solid var(--rule); }
@@ -1293,8 +1380,6 @@ section { padding: var(--section-pad) 0; position: relative; }
   .section-head { grid-template-columns: 1fr; gap: 24px; }
   .twocol, .twocol--reverse { grid-template-columns: 1fr; gap: 40px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-  .logo-wall { grid-template-columns: repeat(3, 1fr); }
-  .logo-wall__item:nth-child(3n) { border-right: 0; }
   .steps { grid-template-columns: repeat(2, 1fr); }
   .step:nth-child(2n) { border-right: 0; }
   .form-grid { grid-template-columns: 1fr; }
@@ -1306,8 +1391,6 @@ section { padding: var(--section-pad) 0; position: relative; }
   .stat-row { grid-template-columns: 1fr; }
   .stat { border-right: 0; border-bottom: 1px solid var(--rule); }
   .stat:last-child { border-bottom: 0; }
-  .logo-wall { grid-template-columns: repeat(2, 1fr); }
-  .logo-wall__item:nth-child(2n) { border-right: 0; }
   .nl-form { height: auto; flex-direction: column; }
   .nl-form input { padding: 16px 18px; }
   .nl-form button { padding: 16px; }
